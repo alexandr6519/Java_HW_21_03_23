@@ -12,15 +12,15 @@ public class MainNotebook {
                 Arrays.asList(notebook_1, notebook_2, notebook_3, notebook_4, notebook_5, notebook_6));
         System.out.println(
                 "Здравствуйте! Для подбора параметров ноутбука введите последовательно критерии вашего выбора!");
-        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ\n 2 - Объем ЖД\n " +
-                "3 - Операционная система\n 4 - Цвет\n 0 - Завершение выбора критериев\n");
-        Scanner scn = new Scanner(System.in);
-
         Map<String, Integer> mapOptions = new HashMap<>();
         mapOptions.put("amountRam", 0);
         mapOptions.put("hardDiskCapacity", 0);
         mapOptions.put("systemOperating", 0);
         mapOptions.put("colour", 0);
+                       Notebook.printInvitationForUser(mapOptions);
+        Scanner scn = new Scanner(System.in);
+
+        
         int numberOption = -1;
         Set<Integer> setNumbersOptions = new HashSet<>();
 
